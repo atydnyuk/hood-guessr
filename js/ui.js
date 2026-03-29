@@ -17,6 +17,8 @@ const UI = (() => {
     els.finalScore = document.getElementById('final-score');
     els.finalBreakdown = document.getElementById('final-breakdown');
     els.restartBtn = document.getElementById('restart-btn');
+    els.confirmBar = document.getElementById('confirm-bar');
+    els.confirmBtn = document.getElementById('confirm-btn');
   }
 
   function showPrompt(name) {
@@ -94,9 +96,21 @@ const UI = (() => {
     els.endOverlay.classList.add('hidden');
   }
 
+  function showConfirm() {
+    els.confirmBar.classList.remove('hidden');
+  }
+
+  function hideConfirm() {
+    els.confirmBar.classList.add('hidden');
+  }
+
+  function onConfirm(handler) {
+    els.confirmBtn.addEventListener('click', handler);
+  }
+
   function onRestart(handler) {
     els.restartBtn.addEventListener('click', handler);
   }
 
-  return { init, showPrompt, hidePrompt, updateRound, updateScore, showResult, hideResult, onNext, showStart, hideStart, onStart, showEnd, hideEnd, onRestart };
+  return { init, showPrompt, hidePrompt, updateRound, updateScore, showResult, hideResult, onNext, showStart, hideStart, onStart, showConfirm, hideConfirm, onConfirm, showEnd, hideEnd, onRestart };
 })();
