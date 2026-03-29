@@ -55,15 +55,31 @@ const Geo = (() => {
     return Infinity;
   }
 
-  // Pick n random neighborhoods, attempting borough diversity
-  function getRandomNeighborhoods(n) {
+  // Seeded PRNG (mulberry32) — returns a function that produces [0, 1) like Math.random()
+  function mulberry32(seed) {
+    return function() {
+      seed = (seed + 0x6D2B79F5) >>> 0;
+      let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  // Pick n neighborhoods using a numeric seed for determinism
+  function getNeighborhoodsForSeed(n, numericSeed) {
+    const rand = mulberry32(numericSeed);
     const features = [...neighborhoods.features];
-    // Shuffle
     for (let i = features.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
+      const j = Math.floor(rand() * (i + 1));
       [features[i], features[j]] = [features[j], features[i]];
     }
     return features.slice(0, n);
+  }
+
+  // Pick n random neighborhoods (generates a random seed internally)
+  function getRandomNeighborhoods(n) {
+    const seed = Math.floor(Math.random() * 2176782336);
+    return getNeighborhoodsForSeed(n, seed);
   }
 
   // Get centroid of a feature
@@ -77,5 +93,5 @@ const Geo = (() => {
     return neighborhoods.features.find(f => f.properties.name === name) || null;
   }
 
-  return { loadData, getNeighborhoods, findNeighborhood, getDistance, getRandomNeighborhoods, getCentroid, getFeatureByName };
+  return { loadData, getNeighborhoods, findNeighborhood, getDistance, getNeighborhoodsForSeed, getRandomNeighborhoods, getCentroid, getFeatureByName };
 })();

@@ -13,9 +13,17 @@ const UI = (() => {
     els.nextBtn = document.getElementById('next-btn');
     els.startOverlay = document.getElementById('start-overlay');
     els.startBtn = document.getElementById('start-btn');
+    els.seedInput = document.getElementById('seed-input');
     els.endOverlay = document.getElementById('end-overlay');
     els.finalScore = document.getElementById('final-score');
     els.finalBreakdown = document.getElementById('final-breakdown');
+    els.seedValue = document.getElementById('seed-value');
+    els.copySeedBtn = document.getElementById('copy-seed-btn');
+    els.copySeedBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(els.seedValue.textContent).then(() => {
+        els.copySeedBtn.textContent = 'Copied!';
+      });
+    });
     els.restartBtn = document.getElementById('restart-btn');
     els.confirmBar = document.getElementById('confirm-bar');
     els.confirmBtn = document.getElementById('confirm-btn');
@@ -81,7 +89,7 @@ const UI = (() => {
     els.startBtn.addEventListener('click', handler);
   }
 
-  function showEnd(score, total, results) {
+  function showEnd(score, total, results, seed) {
     els.finalScore.textContent = `${score} / ${total}`;
 
     const lines = results.map(r => {
@@ -89,7 +97,15 @@ const UI = (() => {
       return `${icon} ${r.name}: ${r.points} pts`;
     });
     els.finalBreakdown.innerHTML = lines.join('<br>');
+
+    els.seedValue.textContent = seed;
+    els.copySeedBtn.textContent = 'Copy';
+
     els.endOverlay.classList.remove('hidden');
+  }
+
+  function getSeedInput() {
+    return els.seedInput ? els.seedInput.value.trim() : '';
   }
 
   function hideEnd() {
@@ -112,5 +128,5 @@ const UI = (() => {
     els.restartBtn.addEventListener('click', handler);
   }
 
-  return { init, showPrompt, hidePrompt, updateRound, updateScore, showResult, hideResult, onNext, showStart, hideStart, onStart, showConfirm, hideConfirm, onConfirm, showEnd, hideEnd, onRestart };
+  return { init, showPrompt, hidePrompt, updateRound, updateScore, showResult, hideResult, onNext, showStart, hideStart, onStart, showConfirm, hideConfirm, onConfirm, showEnd, hideEnd, onRestart, getSeedInput };
 })();
