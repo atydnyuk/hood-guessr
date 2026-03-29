@@ -69,21 +69,18 @@ const App = (() => {
   function handleGuess(latlng) {
     if (state.phase !== 'prompting') return;
 
+    const guessedFeature = Geo.findNeighborhood(latlng.lat, latlng.lng);
+    if (!guessedFeature) return; // Ignore clicks outside neighborhoods
+
     state.phase = 'answered';
     GameMap.disableClick();
 
     const targetFeature = state.neighborhoods[state.round - 1];
     const targetName = targetFeature.properties.name;
-    const guessedFeature = Geo.findNeighborhood(latlng.lat, latlng.lng);
-    const guessedName = guessedFeature ? guessedFeature.properties.name : null;
+    const guessedName = guessedFeature.properties.name;
 
     // Calculate distance
-    let distance;
-    if (!guessedName) {
-      distance = Infinity;
-    } else {
-      distance = Geo.getDistance(guessedName, targetName);
-    }
+    const distance = Geo.getDistance(guessedName, targetName);
 
     // Calculate points
     let points;
