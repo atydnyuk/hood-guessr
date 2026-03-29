@@ -103,18 +103,7 @@ body {
   backdrop-filter: blur(4px);
 }
 
-#result-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 40px;
-  background: rgba(0,0,0,0.25);
-}
-
-#start-card, #end-card, #result-card {
+#start-card, #end-card {
   background: #16213e;
   border: 2px solid #0f3460;
   border-radius: 16px;
@@ -179,28 +168,44 @@ button:hover {
   background: #c73652;
 }
 
-/* Result overlay */
+/* Result card (floating over NJ) */
 #result-card {
-  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 2000;
+  background: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
-#result-points {
-  font-size: 48px;
+#result-card #result-points {
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
-#result-message {
-  font-size: 16px;
+#result-card #result-message {
   color: #a0a0b8;
-  margin-bottom: 20px;
+  font-size: 13px;
+  margin-bottom: 14px;
   line-height: 1.4;
 }
 
-.points-100 #result-points { color: #4ecdc4; }
-.points-50 #result-points { color: #ffe66d; }
-.points-25 #result-points { color: #ff9a56; }
-.points-0 #result-points { color: #e94560; }
+#result-card button {
+  padding: 8px 24px;
+  font-size: 14px;
+}
+
+#result-card.points-100 #result-points { color: #4ecdc4; }
+#result-card.points-50 #result-points { color: #ffe66d; }
+#result-card.points-25 #result-points { color: #ff9a56; }
+#result-card.points-0 #result-points { color: #e94560; }
 
 /* End screen */
 #final-score {
