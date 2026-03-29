@@ -42,32 +42,23 @@ body {
   z-index: 1;
 }
 
-/* Prompt bar */
+/* Prompt bar (inline in header) */
 #prompt-bar {
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  background: #16213e;
-  border: 2px solid #0f3460;
-  border-radius: 12px;
-  padding: 12px 28px;
-  font-size: 20px;
+  flex: 1;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  font-size: 18px;
 }
 
 #neighborhood-name {
   font-weight: 700;
   color: #e94560;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 /* Overlays */
 .hidden { display: none !important; }
 
-#start-overlay, #end-overlay, #result-overlay {
+#start-overlay, #end-overlay {
   position: fixed;
   inset: 0;
   z-index: 2000;
@@ -76,6 +67,17 @@ body {
   justify-content: center;
   background: rgba(0,0,0,0.7);
   backdrop-filter: blur(4px);
+}
+
+#result-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 40px;
+  background: rgba(0,0,0,0.25);
 }
 
 #start-card, #end-card, #result-card {
@@ -210,3 +212,23 @@ button:hover {
 
 /* Leaflet overrides */
 .leaflet-control-attribution { font-size: 10px !important; }
+.leaflet-container { cursor: crosshair !important; }
+.leaflet-container.leaflet-drag-target { cursor: grabbing !important; }
+.leaflet-marker-icon, .leaflet-marker-shadow { cursor: default !important; }
+
+.neighborhood-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.neighborhood-label span {
+  background: rgba(22, 33, 62, 0.85);
+  color: #4ecdc4;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}

@@ -5,6 +5,7 @@ const GameMap = (() => {
   let markers = [];   // pins, lines, etc.
   let overlays = [];  // neighborhood highlight layers
   let clickEnabled = false;
+  let boundaryLayer = null;
 
   function init() {
     map = L.map('map', {
@@ -30,6 +31,19 @@ const GameMap = (() => {
     });
   }
 
+  // Show subtle outline of all neighborhood boundaries
+  function showBoundary(geojson) {
+    boundaryLayer = L.geoJSON(geojson, {
+      style: {
+        color: '#0f3460',
+        weight: 1,
+        fillColor: 'transparent',
+        fillOpacity: 0
+      },
+      interactive: false
+    }).addTo(map);
+  }
+
   function onMapClick(handler) {
     clickHandler = handler;
   }
@@ -50,7 +64,7 @@ const GameMap = (() => {
     return marker;
   }
 
-  // Highlight the correct neighborhood
+  // Highlight the correct neighborhood with a label
   function showCorrectNeighborhood(feature) {
     const layer = L.geoJSON(feature, {
       style: {
@@ -61,6 +75,19 @@ const GameMap = (() => {
       }
     }).addTo(map);
     overlays.push(layer);
+
+    // Add name label at centroid
+    const centroid = turf.centroid(feature);
+    const label = L.marker([centroid.geometry.coordinates[1], centroid.geometry.coordinates[0]], {
+      icon: L.divIcon({
+        className: 'neighborhood-label',
+        html: `<span>${feature.properties.name}</span>`,
+        iconSize: [200, 20],
+        iconAnchor: [100, 10]
+      }),
+      interactive: false
+    }).addTo(map);
+    overlays.push(label);
   }
 
   // Highlight the guessed neighborhood (if different from correct)
@@ -113,5 +140,5 @@ const GameMap = (() => {
     map.setView([40.7128, -74.006], 11);
   }
 
-  return { init, onMapClick, enableClick, disableClick, placePin, showCorrectNeighborhood, showGuessedNeighborhood, drawLine, placeCorrectMarker, clear, resetView };
+  return { init, showBoundary, onMapClick, enableClick, disableClick, placePin, showCorrectNeighborhood, showGuessedNeighborhood, drawLine, placeCorrectMarker, clear, resetView };
 })();

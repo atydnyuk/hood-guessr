@@ -13,8 +13,9 @@ const App = (() => {
     UI.init();
     GameMap.init();
 
-    // Load data
+    // Load data and show play area boundary
     await Geo.loadData();
+    GameMap.showBoundary(Geo.getNeighborhoods());
 
     // Wire up event handlers
     GameMap.onMapClick(handleGuess);
