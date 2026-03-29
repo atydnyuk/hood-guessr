@@ -1,0 +1,212 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #16213e;
+  border-bottom: 2px solid #0f3460;
+  z-index: 1000;
+}
+
+#title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #e94560;
+}
+
+#stats {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#score-display {
+  color: #e94560;
+}
+
+#map {
+  flex: 1;
+  z-index: 1;
+}
+
+/* Prompt bar */
+#prompt-bar {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+#neighborhood-name {
+  font-weight: 700;
+  color: #e94560;
+  font-size: 24px;
+}
+
+/* Overlays */
+.hidden { display: none !important; }
+
+#start-overlay, #end-overlay, #result-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+}
+
+#start-card, #end-card, #result-card {
+  background: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+#start-card h1, #end-card h1 {
+  color: #e94560;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+#start-card p, #end-card p {
+  color: #a0a0b8;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+#instructions {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+#instructions p {
+  margin-bottom: 12px;
+}
+
+#instructions table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#instructions td {
+  padding: 6px 12px;
+  border-bottom: 1px solid #0f3460;
+  font-size: 14px;
+}
+
+#instructions td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: #e94560;
+}
+
+button {
+  background: #e94560;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #c73652;
+}
+
+/* Result overlay */
+#result-card {
+  padding: 30px;
+}
+
+#result-points {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+#result-message {
+  font-size: 16px;
+  color: #a0a0b8;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.points-100 #result-points { color: #4ecdc4; }
+.points-50 #result-points { color: #ffe66d; }
+.points-25 #result-points { color: #ff9a56; }
+.points-0 #result-points { color: #e94560; }
+
+/* End screen */
+#final-score {
+  font-size: 56px;
+  font-weight: 700;
+  color: #e94560;
+  margin-bottom: 8px;
+}
+
+#final-breakdown {
+  color: #a0a0b8;
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* Pin animation */
+@keyframes pin-drop {
+  0% { transform: translateY(-40px); opacity: 0; }
+  60% { transform: translateY(4px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.pin-marker {
+  animation: pin-drop 0.3s ease-out;
+}
+
+/* Correct neighborhood highlight */
+.correct-neighborhood {
+  fill: #4ecdc4;
+  fill-opacity: 0.35;
+  stroke: #4ecdc4;
+  stroke-width: 3;
+}
+
+.guessed-neighborhood {
+  fill: #e94560;
+  fill-opacity: 0.2;
+  stroke: #e94560;
+  stroke-width: 2;
+  stroke-dasharray: 6;
+}
+
+/* Leaflet overrides */
+.leaflet-control-attribution { font-size: 10px !important; }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hood Guessr - NYC</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="header">
+    <div id="title">Hood Guessr</div>
+    <div id="stats">
+      <span id="round-display">0 / 10</span>
+      <span id="score-display">0 pts</span>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <div id="prompt-bar">
+    <span id="prompt-label">Where is</span>
+    <span id="neighborhood-name">—</span>
+    <span id="prompt-suffix">?</span>
+  </div>
+
+  <div id="result-overlay" class="hidden">
+    <div id="result-card">
+      <div id="result-points"></div>
+      <div id="result-message"></div>
+      <button id="next-btn">Next</button>
+    </div>
+  </div>
+
+  <div id="start-overlay">
+    <div id="start-card">
+      <h1>Hood Guessr</h1>
+      <p>How well do you know NYC neighborhoods?</p>
+      <div id="instructions">
+        <p>You'll be shown 10 neighborhood names. Click the map where you think each one is.</p>
+        <table>
+          <tr><td>Exact neighborhood</td><td>100 pts</td></tr>
+          <tr><td>1 neighborhood away</td><td>50 pts</td></tr>
+          <tr><td>2 neighborhoods away</td><td>25 pts</td></tr>
+          <tr><td>Further</td><td>0 pts</td></tr>
+        </table>
+      </div>
+      <button id="start-btn">Play</button>
+    </div>
+  </div>
+
+  <div id="end-overlay" class="hidden">
+    <div id="end-card">
+      <h1>Game Over</h1>
+      <div id="final-score"></div>
+      <div id="final-breakdown"></div>
+      <button id="restart-btn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
+  <script src="js/geo.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

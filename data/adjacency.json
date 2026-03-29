@@ -1,0 +1,1293 @@
+{
+  "Greenpoint": [
+    "East Williamsburg",
+    "Murray Hill-Kips Bay",
+    "Williamsburg"
+  ],
+  "Williamsburg": [
+    "East Village",
+    "East Williamsburg",
+    "Greenpoint",
+    "South Williamsburg",
+    "Stuyvesant Town-Peter Cooper Village"
+  ],
+  "South Williamsburg": [
+    "Bedford-Stuyvesant (East)",
+    "Bedford-Stuyvesant (West)",
+    "Bushwick (West)",
+    "Clinton Hill",
+    "East Williamsburg",
+    "Fort Greene",
+    "Williamsburg"
+  ],
+  "East Williamsburg": [
+    "Bedford-Stuyvesant (East)",
+    "Bushwick (West)",
+    "Greenpoint",
+    "Maspeth",
+    "Ridgewood",
+    "South Williamsburg",
+    "Williamsburg"
+  ],
+  "Brooklyn Heights": [
+    "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "Financial District-Battery Park City"
+  ],
+  "Downtown Brooklyn-DUMBO-Boerum Hill": [
+    "Brooklyn Heights",
+    "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "Financial District-Battery Park City",
+    "Fort Greene",
+    "Lower East Side",
+    "Park Slope"
+  ],
+  "Fort Greene": [
+    "Clinton Hill",
+    "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "Park Slope",
+    "Prospect Heights",
+    "South Williamsburg"
+  ],
+  "Clinton Hill": [
+    "Bedford-Stuyvesant (West)",
+    "Crown Heights (North)",
+    "Fort Greene",
+    "Prospect Heights",
+    "South Williamsburg"
+  ],
+  "Bedford-Stuyvesant (West)": [
+    "Bedford-Stuyvesant (East)",
+    "Clinton Hill",
+    "Crown Heights (North)",
+    "Prospect Heights",
+    "South Williamsburg"
+  ],
+  "Bedford-Stuyvesant (East)": [
+    "Bedford-Stuyvesant (West)",
+    "Bushwick (East)",
+    "Bushwick (West)",
+    "Crown Heights (North)",
+    "East Williamsburg",
+    "Ocean Hill",
+    "South Williamsburg"
+  ],
+  "Bushwick (West)": [
+    "Bedford-Stuyvesant (East)",
+    "Bushwick (East)",
+    "East Williamsburg",
+    "Ridgewood",
+    "South Williamsburg"
+  ],
+  "Bushwick (East)": [
+    "Bedford-Stuyvesant (East)",
+    "Bushwick (West)",
+    "Cypress Hills",
+    "Ocean Hill",
+    "Ridgewood"
+  ],
+  "Cypress Hills": [
+    "Bushwick (East)",
+    "East New York (North)",
+    "East New York-City Line",
+    "Ocean Hill",
+    "Ozone Park (North)",
+    "Woodhaven"
+  ],
+  "East New York (North)": [
+    "Brownsville",
+    "Cypress Hills",
+    "East New York-City Line",
+    "East New York-New Lots",
+    "Ocean Hill"
+  ],
+  "East New York-New Lots": [
+    "Brownsville",
+    "Canarsie",
+    "East Flatbush-Remsen Village",
+    "East New York (North)",
+    "East New York-City Line",
+    "Spring Creek-Starrett City"
+  ],
+  "Spring Creek-Starrett City": [
+    "Canarsie",
+    "East New York-City Line",
+    "East New York-New Lots",
+    "Howard Beach-Lindenwood"
+  ],
+  "East New York-City Line": [
+    "Cypress Hills",
+    "East New York (North)",
+    "East New York-New Lots",
+    "Howard Beach-Lindenwood",
+    "Ozone Park",
+    "Ozone Park (North)",
+    "Spring Creek-Starrett City",
+    "Woodhaven"
+  ],
+  "Carroll Gardens-Cobble Hill-Gowanus-Red Hook": [
+    "Brooklyn Heights",
+    "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "Park Slope",
+    "Sunset Park (West)",
+    "Windsor Terrace-South Slope"
+  ],
+  "Park Slope": [
+    "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "Fort Greene",
+    "Prospect Heights",
+    "Windsor Terrace-South Slope"
+  ],
+  "Windsor Terrace-South Slope": [
+    "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "Flatbush (West)-Ditmas Park-Parkville",
+    "Kensington",
+    "Park Slope",
+    "Sunset Park (West)"
+  ],
+  "Sunset Park (West)": [
+    "Bay Ridge",
+    "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "Sunset Park (Central)",
+    "Windsor Terrace-South Slope"
+  ],
+  "Sunset Park (Central)": [
+    "Bay Ridge",
+    "Borough Park",
+    "Dyker Heights",
+    "Sunset Park (East)-Borough Park (West)",
+    "Sunset Park (West)"
+  ],
+  "Prospect Heights": [
+    "Bedford-Stuyvesant (West)",
+    "Clinton Hill",
+    "Crown Heights (North)",
+    "Crown Heights (South)",
+    "Fort Greene",
+    "Park Slope"
+  ],
+  "Crown Heights (North)": [
+    "Bedford-Stuyvesant (East)",
+    "Bedford-Stuyvesant (West)",
+    "Brownsville",
+    "Clinton Hill",
+    "Crown Heights (South)",
+    "East Flatbush-Remsen Village",
+    "Ocean Hill",
+    "Prospect Heights"
+  ],
+  "Crown Heights (South)": [
+    "Crown Heights (North)",
+    "East Flatbush-Remsen Village",
+    "East Flatbush-Rugby",
+    "Prospect Heights",
+    "Prospect Lefferts Gardens-Wingate"
+  ],
+  "Prospect Lefferts Gardens-Wingate": [
+    "Crown Heights (South)",
+    "East Flatbush-Erasmus",
+    "East Flatbush-Rugby",
+    "Flatbush"
+  ],
+  "Bay Ridge": [
+    "Dyker Heights",
+    "Sunset Park (Central)",
+    "Sunset Park (West)"
+  ],
+  "Dyker Heights": [
+    "Bath Beach",
+    "Bay Ridge",
+    "Bensonhurst",
+    "Borough Park",
+    "Sunset Park (Central)"
+  ],
+  "Bensonhurst": [
+    "Bath Beach",
+    "Borough Park",
+    "Dyker Heights",
+    "Gravesend (West)",
+    "Mapleton-Midwood (West)"
+  ],
+  "Bath Beach": [
+    "Bensonhurst",
+    "Dyker Heights",
+    "Gravesend (West)"
+  ],
+  "Gravesend (West)": [
+    "Bath Beach",
+    "Bensonhurst",
+    "Gravesend (East)-Homecrest",
+    "Gravesend (South)",
+    "Mapleton-Midwood (West)"
+  ],
+  "Sunset Park (East)-Borough Park (West)": [
+    "Borough Park",
+    "Sunset Park (Central)"
+  ],
+  "Borough Park": [
+    "Bensonhurst",
+    "Dyker Heights",
+    "Flatbush (West)-Ditmas Park-Parkville",
+    "Kensington",
+    "Mapleton-Midwood (West)",
+    "Sunset Park (Central)",
+    "Sunset Park (East)-Borough Park (West)"
+  ],
+  "Kensington": [
+    "Borough Park",
+    "Flatbush (West)-Ditmas Park-Parkville",
+    "Windsor Terrace-South Slope"
+  ],
+  "Mapleton-Midwood (West)": [
+    "Bensonhurst",
+    "Borough Park",
+    "Flatbush (West)-Ditmas Park-Parkville",
+    "Gravesend (East)-Homecrest",
+    "Gravesend (West)",
+    "Midwood"
+  ],
+  "Gravesend (South)": [
+    "Brighton Beach",
+    "Coney Island-Sea Gate",
+    "Gravesend (East)-Homecrest",
+    "Gravesend (West)",
+    "Sheepshead Bay-Manhattan Beach-Gerritsen Beach"
+  ],
+  "Coney Island-Sea Gate": [
+    "Brighton Beach",
+    "Gravesend (South)"
+  ],
+  "Brighton Beach": [
+    "Coney Island-Sea Gate",
+    "Gravesend (South)",
+    "Sheepshead Bay-Manhattan Beach-Gerritsen Beach"
+  ],
+  "Flatbush": [
+    "East Flatbush-Erasmus",
+    "East Flatbush-Farragut",
+    "Flatbush (West)-Ditmas Park-Parkville",
+    "Flatlands",
+    "Midwood",
+    "Prospect Lefferts Gardens-Wingate"
+  ],
+  "Flatbush (West)-Ditmas Park-Parkville": [
+    "Borough Park",
+    "Flatbush",
+    "Kensington",
+    "Mapleton-Midwood (West)",
+    "Midwood",
+    "Windsor Terrace-South Slope"
+  ],
+  "Midwood": [
+    "Flatbush",
+    "Flatbush (West)-Ditmas Park-Parkville",
+    "Flatlands",
+    "Gravesend (East)-Homecrest",
+    "Madison",
+    "Mapleton-Midwood (West)"
+  ],
+  "Gravesend (East)-Homecrest": [
+    "Gravesend (South)",
+    "Gravesend (West)",
+    "Madison",
+    "Mapleton-Midwood (West)",
+    "Midwood",
+    "Sheepshead Bay-Manhattan Beach-Gerritsen Beach"
+  ],
+  "Madison": [
+    "Flatlands",
+    "Gravesend (East)-Homecrest",
+    "Marine Park-Mill Basin-Bergen Beach",
+    "Midwood",
+    "Sheepshead Bay-Manhattan Beach-Gerritsen Beach"
+  ],
+  "Sheepshead Bay-Manhattan Beach-Gerritsen Beach": [
+    "Brighton Beach",
+    "Gravesend (East)-Homecrest",
+    "Gravesend (South)",
+    "Madison"
+  ],
+  "Ocean Hill": [
+    "Bedford-Stuyvesant (East)",
+    "Brownsville",
+    "Bushwick (East)",
+    "Crown Heights (North)",
+    "Cypress Hills",
+    "East New York (North)"
+  ],
+  "Brownsville": [
+    "Crown Heights (North)",
+    "East Flatbush-Remsen Village",
+    "East New York (North)",
+    "East New York-New Lots",
+    "Ocean Hill"
+  ],
+  "East Flatbush-Erasmus": [
+    "East Flatbush-Farragut",
+    "East Flatbush-Rugby",
+    "Flatbush",
+    "Prospect Lefferts Gardens-Wingate"
+  ],
+  "East Flatbush-Farragut": [
+    "East Flatbush-Erasmus",
+    "East Flatbush-Rugby",
+    "Flatbush",
+    "Flatlands"
+  ],
+  "East Flatbush-Rugby": [
+    "Canarsie",
+    "Crown Heights (South)",
+    "East Flatbush-Erasmus",
+    "East Flatbush-Farragut",
+    "East Flatbush-Remsen Village",
+    "Flatlands",
+    "Prospect Lefferts Gardens-Wingate"
+  ],
+  "East Flatbush-Remsen Village": [
+    "Brownsville",
+    "Canarsie",
+    "Crown Heights (North)",
+    "Crown Heights (South)",
+    "East Flatbush-Rugby",
+    "East New York-New Lots"
+  ],
+  "Flatlands": [
+    "Canarsie",
+    "East Flatbush-Farragut",
+    "East Flatbush-Rugby",
+    "Flatbush",
+    "Madison",
+    "Marine Park-Mill Basin-Bergen Beach",
+    "Midwood"
+  ],
+  "Marine Park-Mill Basin-Bergen Beach": [
+    "Canarsie",
+    "Flatlands",
+    "Madison"
+  ],
+  "Canarsie": [
+    "East Flatbush-Remsen Village",
+    "East Flatbush-Rugby",
+    "East New York-New Lots",
+    "Flatlands",
+    "Marine Park-Mill Basin-Bergen Beach",
+    "Spring Creek-Starrett City"
+  ],
+  "Mott Haven-Port Morris": [
+    "Concourse-Concourse Village",
+    "Hunts Point",
+    "Longwood",
+    "Melrose"
+  ],
+  "Melrose": [
+    "Concourse-Concourse Village",
+    "Longwood",
+    "Morrisania",
+    "Mott Haven-Port Morris"
+  ],
+  "Hunts Point": [
+    "Crotona Park East",
+    "Longwood",
+    "Mott Haven-Port Morris",
+    "Soundview-Bruckner-Bronx River"
+  ],
+  "Longwood": [
+    "Crotona Park East",
+    "Hunts Point",
+    "Melrose",
+    "Morrisania",
+    "Mott Haven-Port Morris"
+  ],
+  "Morrisania": [
+    "Claremont Village-Claremont (East)",
+    "Concourse-Concourse Village",
+    "Crotona Park East",
+    "Longwood",
+    "Melrose"
+  ],
+  "Claremont Village-Claremont (East)": [
+    "Concourse-Concourse Village",
+    "Morrisania",
+    "Mount Eden-Claremont (West)",
+    "Mount Hope",
+    "Tremont"
+  ],
+  "Crotona Park East": [
+    "Hunts Point",
+    "Longwood",
+    "Morrisania",
+    "Soundview-Bruckner-Bronx River",
+    "Tremont",
+    "West Farms"
+  ],
+  "Concourse-Concourse Village": [
+    "Claremont Village-Claremont (East)",
+    "Highbridge",
+    "Melrose",
+    "Morrisania",
+    "Mott Haven-Port Morris",
+    "Mount Eden-Claremont (West)"
+  ],
+  "Highbridge": [
+    "Concourse-Concourse Village",
+    "Mount Eden-Claremont (West)",
+    "University Heights (South)-Morris Heights"
+  ],
+  "Mount Eden-Claremont (West)": [
+    "Claremont Village-Claremont (East)",
+    "Concourse-Concourse Village",
+    "Highbridge",
+    "Mount Hope",
+    "University Heights (South)-Morris Heights"
+  ],
+  "University Heights (South)-Morris Heights": [
+    "Fordham Heights",
+    "Highbridge",
+    "Mount Eden-Claremont (West)",
+    "Mount Hope",
+    "University Heights (North)-Fordham"
+  ],
+  "Mount Hope": [
+    "Belmont",
+    "Claremont Village-Claremont (East)",
+    "Fordham Heights",
+    "Mount Eden-Claremont (West)",
+    "Tremont",
+    "University Heights (South)-Morris Heights"
+  ],
+  "Fordham Heights": [
+    "Belmont",
+    "Mount Hope",
+    "University Heights (North)-Fordham",
+    "University Heights (South)-Morris Heights"
+  ],
+  "West Farms": [
+    "Belmont",
+    "Crotona Park East",
+    "Pelham Parkway-Van Nest",
+    "Soundview-Bruckner-Bronx River",
+    "Tremont"
+  ],
+  "Tremont": [
+    "Belmont",
+    "Claremont Village-Claremont (East)",
+    "Crotona Park East",
+    "Mount Hope",
+    "West Farms"
+  ],
+  "Belmont": [
+    "Bedford Park",
+    "Fordham Heights",
+    "Mount Hope",
+    "Norwood",
+    "Tremont",
+    "University Heights (North)-Fordham",
+    "West Farms"
+  ],
+  "University Heights (North)-Fordham": [
+    "Bedford Park",
+    "Belmont",
+    "Fordham Heights",
+    "Kingsbridge Heights-Van Cortlandt Village",
+    "Kingsbridge-Marble Hill",
+    "University Heights (South)-Morris Heights"
+  ],
+  "Bedford Park": [
+    "Belmont",
+    "Kingsbridge Heights-Van Cortlandt Village",
+    "Norwood",
+    "University Heights (North)-Fordham"
+  ],
+  "Norwood": [
+    "Bedford Park",
+    "Belmont",
+    "Kingsbridge Heights-Van Cortlandt Village",
+    "Williamsbridge-Olinville"
+  ],
+  "Kingsbridge Heights-Van Cortlandt Village": [
+    "Bedford Park",
+    "Kingsbridge-Marble Hill",
+    "Norwood",
+    "University Heights (North)-Fordham"
+  ],
+  "Kingsbridge-Marble Hill": [
+    "Kingsbridge Heights-Van Cortlandt Village",
+    "Riverdale-Spuyten Duyvil",
+    "University Heights (North)-Fordham"
+  ],
+  "Riverdale-Spuyten Duyvil": [
+    "Kingsbridge-Marble Hill"
+  ],
+  "Soundview-Bruckner-Bronx River": [
+    "Castle Hill-Unionport",
+    "Crotona Park East",
+    "Hunts Point",
+    "Parkchester",
+    "Pelham Parkway-Van Nest",
+    "Soundview-Clason Point",
+    "West Farms"
+  ],
+  "Soundview-Clason Point": [
+    "Castle Hill-Unionport",
+    "Soundview-Bruckner-Bronx River"
+  ],
+  "Castle Hill-Unionport": [
+    "Parkchester",
+    "Soundview-Bruckner-Bronx River",
+    "Soundview-Clason Point",
+    "Throgs Neck-Schuylerville",
+    "Westchester Square"
+  ],
+  "Parkchester": [
+    "Castle Hill-Unionport",
+    "Morris Park",
+    "Pelham Parkway-Van Nest",
+    "Soundview-Bruckner-Bronx River",
+    "Westchester Square"
+  ],
+  "Westchester Square": [
+    "Castle Hill-Unionport",
+    "Morris Park",
+    "Parkchester",
+    "Pelham Parkway-Van Nest",
+    "Throgs Neck-Schuylerville"
+  ],
+  "Throgs Neck-Schuylerville": [
+    "Castle Hill-Unionport",
+    "Pelham Bay-Country Club-City Island",
+    "Westchester Square"
+  ],
+  "Pelham Bay-Country Club-City Island": [
+    "Throgs Neck-Schuylerville"
+  ],
+  "Co-op City": [
+    "Eastchester-Edenwald-Baychester",
+    "Pelham Gardens"
+  ],
+  "Pelham Parkway-Van Nest": [
+    "Allerton",
+    "Morris Park",
+    "Parkchester",
+    "Soundview-Bruckner-Bronx River",
+    "West Farms",
+    "Westchester Square"
+  ],
+  "Morris Park": [
+    "Allerton",
+    "Parkchester",
+    "Pelham Gardens",
+    "Pelham Parkway-Van Nest",
+    "Westchester Square"
+  ],
+  "Pelham Gardens": [
+    "Allerton",
+    "Co-op City",
+    "Eastchester-Edenwald-Baychester",
+    "Morris Park",
+    "Williamsbridge-Olinville"
+  ],
+  "Allerton": [
+    "Morris Park",
+    "Pelham Gardens",
+    "Pelham Parkway-Van Nest",
+    "Williamsbridge-Olinville"
+  ],
+  "Williamsbridge-Olinville": [
+    "Allerton",
+    "Eastchester-Edenwald-Baychester",
+    "Norwood",
+    "Pelham Gardens",
+    "Wakefield-Woodlawn"
+  ],
+  "Eastchester-Edenwald-Baychester": [
+    "Co-op City",
+    "Pelham Gardens",
+    "Wakefield-Woodlawn",
+    "Williamsbridge-Olinville"
+  ],
+  "Wakefield-Woodlawn": [
+    "Eastchester-Edenwald-Baychester",
+    "Williamsbridge-Olinville"
+  ],
+  "Financial District-Battery Park City": [
+    "Brooklyn Heights",
+    "Chinatown-Two Bridges",
+    "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "Tribeca-Civic Center"
+  ],
+  "Tribeca-Civic Center": [
+    "Chinatown-Two Bridges",
+    "Financial District-Battery Park City",
+    "SoHo-Little Italy-Hudson Square"
+  ],
+  "SoHo-Little Italy-Hudson Square": [
+    "Chinatown-Two Bridges",
+    "East Village",
+    "Greenwich Village",
+    "Lower East Side",
+    "Tribeca-Civic Center",
+    "West Village"
+  ],
+  "Greenwich Village": [
+    "Chelsea-Hudson Yards",
+    "East Village",
+    "Gramercy",
+    "Lower East Side",
+    "Midtown South-Flatiron-Union Square",
+    "SoHo-Little Italy-Hudson Square",
+    "West Village"
+  ],
+  "West Village": [
+    "Chelsea-Hudson Yards",
+    "Greenwich Village",
+    "Midtown South-Flatiron-Union Square",
+    "SoHo-Little Italy-Hudson Square"
+  ],
+  "Chinatown-Two Bridges": [
+    "Financial District-Battery Park City",
+    "Lower East Side",
+    "SoHo-Little Italy-Hudson Square",
+    "Tribeca-Civic Center"
+  ],
+  "Lower East Side": [
+    "Chinatown-Two Bridges",
+    "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "East Village",
+    "Greenwich Village",
+    "SoHo-Little Italy-Hudson Square"
+  ],
+  "East Village": [
+    "Gramercy",
+    "Greenwich Village",
+    "Lower East Side",
+    "Midtown South-Flatiron-Union Square",
+    "SoHo-Little Italy-Hudson Square",
+    "Stuyvesant Town-Peter Cooper Village",
+    "Williamsburg"
+  ],
+  "Chelsea-Hudson Yards": [
+    "Greenwich Village",
+    "Hell's Kitchen",
+    "Midtown South-Flatiron-Union Square",
+    "Midtown-Times Square",
+    "West Village"
+  ],
+  "Hell's Kitchen": [
+    "Chelsea-Hudson Yards",
+    "Midtown-Times Square",
+    "Upper West Side-Lincoln Square"
+  ],
+  "Midtown South-Flatiron-Union Square": [
+    "Chelsea-Hudson Yards",
+    "East Village",
+    "Gramercy",
+    "Greenwich Village",
+    "Midtown-Times Square",
+    "Murray Hill-Kips Bay",
+    "West Village"
+  ],
+  "Midtown-Times Square": [
+    "Chelsea-Hudson Yards",
+    "East Midtown-Turtle Bay",
+    "Hell's Kitchen",
+    "Midtown South-Flatiron-Union Square",
+    "Murray Hill-Kips Bay",
+    "Upper East Side-Carnegie Hill",
+    "Upper West Side-Lincoln Square"
+  ],
+  "Stuyvesant Town-Peter Cooper Village": [
+    "East Village",
+    "Gramercy",
+    "Murray Hill-Kips Bay",
+    "Williamsburg"
+  ],
+  "Gramercy": [
+    "East Village",
+    "Greenwich Village",
+    "Midtown South-Flatiron-Union Square",
+    "Murray Hill-Kips Bay",
+    "Stuyvesant Town-Peter Cooper Village"
+  ],
+  "Murray Hill-Kips Bay": [
+    "East Midtown-Turtle Bay",
+    "Gramercy",
+    "Greenpoint",
+    "Long Island City-Hunters Point",
+    "Midtown South-Flatiron-Union Square",
+    "Midtown-Times Square",
+    "Stuyvesant Town-Peter Cooper Village"
+  ],
+  "East Midtown-Turtle Bay": [
+    "Midtown-Times Square",
+    "Murray Hill-Kips Bay",
+    "Upper East Side-Carnegie Hill",
+    "Upper East Side-Lenox Hill-Roosevelt Island"
+  ],
+  "Upper West Side-Lincoln Square": [
+    "Hell's Kitchen",
+    "Midtown-Times Square",
+    "Upper West Side (Central)"
+  ],
+  "Upper West Side (Central)": [
+    "Upper West Side-Lincoln Square",
+    "Upper West Side-Manhattan Valley"
+  ],
+  "Upper West Side-Manhattan Valley": [
+    "Harlem (South)",
+    "Morningside Heights",
+    "Upper West Side (Central)"
+  ],
+  "Upper East Side-Lenox Hill-Roosevelt Island": [
+    "East Midtown-Turtle Bay",
+    "Long Island City-Hunters Point",
+    "Old Astoria-Hallets Point",
+    "Upper East Side-Carnegie Hill",
+    "Upper East Side-Yorkville"
+  ],
+  "Upper East Side-Carnegie Hill": [
+    "East Harlem (South)",
+    "East Midtown-Turtle Bay",
+    "Midtown-Times Square",
+    "Upper East Side-Lenox Hill-Roosevelt Island",
+    "Upper East Side-Yorkville"
+  ],
+  "Upper East Side-Yorkville": [
+    "East Harlem (South)",
+    "Upper East Side-Carnegie Hill",
+    "Upper East Side-Lenox Hill-Roosevelt Island"
+  ],
+  "Morningside Heights": [
+    "Harlem (North)",
+    "Harlem (South)",
+    "Manhattanville-West Harlem",
+    "Upper West Side-Manhattan Valley"
+  ],
+  "Manhattanville-West Harlem": [
+    "Hamilton Heights-Sugar Hill",
+    "Harlem (North)",
+    "Harlem (South)",
+    "Morningside Heights"
+  ],
+  "Hamilton Heights-Sugar Hill": [
+    "Harlem (North)",
+    "Manhattanville-West Harlem",
+    "Washington Heights (South)"
+  ],
+  "Harlem (South)": [
+    "East Harlem (North)",
+    "East Harlem (South)",
+    "Harlem (North)",
+    "Manhattanville-West Harlem",
+    "Morningside Heights",
+    "Upper West Side-Manhattan Valley"
+  ],
+  "Harlem (North)": [
+    "East Harlem (North)",
+    "Hamilton Heights-Sugar Hill",
+    "Harlem (South)",
+    "Manhattanville-West Harlem",
+    "Morningside Heights",
+    "Washington Heights (South)"
+  ],
+  "East Harlem (South)": [
+    "East Harlem (North)",
+    "Harlem (South)",
+    "Upper East Side-Carnegie Hill",
+    "Upper East Side-Yorkville"
+  ],
+  "East Harlem (North)": [
+    "East Harlem (South)",
+    "Harlem (North)",
+    "Harlem (South)"
+  ],
+  "Washington Heights (South)": [
+    "Hamilton Heights-Sugar Hill",
+    "Harlem (North)",
+    "Washington Heights (North)"
+  ],
+  "Washington Heights (North)": [
+    "Inwood",
+    "Washington Heights (South)"
+  ],
+  "Inwood": [
+    "Washington Heights (North)"
+  ],
+  "Astoria (North)-Ditmars-Steinway": [
+    "Astoria (Central)",
+    "Astoria (East)-Woodside (North)",
+    "East Elmhurst",
+    "Jackson Heights",
+    "Old Astoria-Hallets Point"
+  ],
+  "Old Astoria-Hallets Point": [
+    "Astoria (Central)",
+    "Astoria (North)-Ditmars-Steinway",
+    "Queensbridge-Ravenswood-Dutch Kills",
+    "Upper East Side-Lenox Hill-Roosevelt Island"
+  ],
+  "Astoria (Central)": [
+    "Astoria (East)-Woodside (North)",
+    "Astoria (North)-Ditmars-Steinway",
+    "Old Astoria-Hallets Point",
+    "Queensbridge-Ravenswood-Dutch Kills"
+  ],
+  "Astoria (East)-Woodside (North)": [
+    "Astoria (Central)",
+    "Astoria (North)-Ditmars-Steinway",
+    "Jackson Heights",
+    "Queensbridge-Ravenswood-Dutch Kills",
+    "Woodside"
+  ],
+  "Queensbridge-Ravenswood-Dutch Kills": [
+    "Astoria (Central)",
+    "Astoria (East)-Woodside (North)",
+    "Long Island City-Hunters Point",
+    "Old Astoria-Hallets Point"
+  ],
+  "Long Island City-Hunters Point": [
+    "Murray Hill-Kips Bay",
+    "Queensbridge-Ravenswood-Dutch Kills",
+    "Sunnyside",
+    "Upper East Side-Lenox Hill-Roosevelt Island"
+  ],
+  "Sunnyside": [
+    "Long Island City-Hunters Point",
+    "Maspeth",
+    "Woodside"
+  ],
+  "Woodside": [
+    "Astoria (East)-Woodside (North)",
+    "Elmhurst",
+    "Jackson Heights",
+    "Maspeth",
+    "Sunnyside"
+  ],
+  "Jackson Heights": [
+    "Astoria (East)-Woodside (North)",
+    "Astoria (North)-Ditmars-Steinway",
+    "Corona",
+    "East Elmhurst",
+    "Elmhurst",
+    "North Corona",
+    "Woodside"
+  ],
+  "East Elmhurst": [
+    "Astoria (North)-Ditmars-Steinway",
+    "Jackson Heights",
+    "North Corona"
+  ],
+  "North Corona": [
+    "Corona",
+    "East Elmhurst",
+    "Elmhurst",
+    "Jackson Heights"
+  ],
+  "Elmhurst": [
+    "Corona",
+    "Jackson Heights",
+    "Maspeth",
+    "Middle Village",
+    "North Corona",
+    "Rego Park",
+    "Woodside"
+  ],
+  "Corona": [
+    "Elmhurst",
+    "Forest Hills",
+    "Jackson Heights",
+    "North Corona",
+    "Rego Park"
+  ],
+  "Maspeth": [
+    "East Williamsburg",
+    "Elmhurst",
+    "Middle Village",
+    "Ridgewood",
+    "Sunnyside",
+    "Woodside"
+  ],
+  "Ridgewood": [
+    "Bushwick (East)",
+    "Bushwick (West)",
+    "East Williamsburg",
+    "Glendale",
+    "Maspeth"
+  ],
+  "Glendale": [
+    "Forest Hills",
+    "Middle Village",
+    "Rego Park",
+    "Ridgewood"
+  ],
+  "Middle Village": [
+    "Elmhurst",
+    "Glendale",
+    "Maspeth",
+    "Rego Park"
+  ],
+  "Rego Park": [
+    "Corona",
+    "Elmhurst",
+    "Forest Hills",
+    "Glendale",
+    "Middle Village"
+  ],
+  "Forest Hills": [
+    "Corona",
+    "Glendale",
+    "Kew Gardens",
+    "Rego Park"
+  ],
+  "College Point": [
+    "Flushing-Willets Point",
+    "Murray Hill-Broadway Flushing",
+    "Whitestone-Beechhurst"
+  ],
+  "Whitestone-Beechhurst": [
+    "Bay Terrace-Clearview",
+    "College Point",
+    "Murray Hill-Broadway Flushing"
+  ],
+  "Bay Terrace-Clearview": [
+    "Auburndale",
+    "Bayside",
+    "Murray Hill-Broadway Flushing",
+    "Whitestone-Beechhurst"
+  ],
+  "Murray Hill-Broadway Flushing": [
+    "Auburndale",
+    "Bay Terrace-Clearview",
+    "College Point",
+    "East Flushing",
+    "Flushing-Willets Point",
+    "Whitestone-Beechhurst"
+  ],
+  "East Flushing": [
+    "Auburndale",
+    "Flushing-Willets Point",
+    "Murray Hill-Broadway Flushing",
+    "Queensboro Hill"
+  ],
+  "Queensboro Hill": [
+    "Auburndale",
+    "East Flushing",
+    "Flushing-Willets Point",
+    "Fresh Meadows-Utopia",
+    "Kew Gardens Hills",
+    "Pomonok-Electchester-Hillcrest"
+  ],
+  "Flushing-Willets Point": [
+    "College Point",
+    "East Flushing",
+    "Murray Hill-Broadway Flushing",
+    "Queensboro Hill"
+  ],
+  "Kew Gardens Hills": [
+    "Jamaica Hills-Briarwood",
+    "Pomonok-Electchester-Hillcrest",
+    "Queensboro Hill"
+  ],
+  "Pomonok-Electchester-Hillcrest": [
+    "Fresh Meadows-Utopia",
+    "Jamaica Estates-Holliswood",
+    "Jamaica Hills-Briarwood",
+    "Kew Gardens Hills",
+    "Queensboro Hill"
+  ],
+  "Fresh Meadows-Utopia": [
+    "Auburndale",
+    "Jamaica Estates-Holliswood",
+    "Pomonok-Electchester-Hillcrest",
+    "Queensboro Hill"
+  ],
+  "Jamaica Estates-Holliswood": [
+    "Fresh Meadows-Utopia",
+    "Hollis",
+    "Jamaica",
+    "Jamaica Hills-Briarwood",
+    "Oakland Gardens-Hollis Hills",
+    "Pomonok-Electchester-Hillcrest",
+    "Queens Village"
+  ],
+  "Jamaica Hills-Briarwood": [
+    "Jamaica",
+    "Jamaica Estates-Holliswood",
+    "Kew Gardens",
+    "Kew Gardens Hills",
+    "Pomonok-Electchester-Hillcrest",
+    "Richmond Hill"
+  ],
+  "Kew Gardens": [
+    "Forest Hills",
+    "Jamaica",
+    "Jamaica Hills-Briarwood",
+    "Richmond Hill"
+  ],
+  "Richmond Hill": [
+    "Jamaica",
+    "Jamaica Hills-Briarwood",
+    "Kew Gardens",
+    "Ozone Park (North)",
+    "South Richmond Hill",
+    "Woodhaven"
+  ],
+  "South Richmond Hill": [
+    "Jamaica",
+    "Ozone Park (North)",
+    "Richmond Hill",
+    "South Jamaica",
+    "South Ozone Park"
+  ],
+  "Ozone Park (North)": [
+    "Cypress Hills",
+    "East New York-City Line",
+    "Ozone Park",
+    "Richmond Hill",
+    "South Ozone Park",
+    "South Richmond Hill",
+    "Woodhaven"
+  ],
+  "Woodhaven": [
+    "Cypress Hills",
+    "East New York-City Line",
+    "Ozone Park (North)",
+    "Richmond Hill"
+  ],
+  "South Ozone Park": [
+    "Baisley Park",
+    "Howard Beach-Lindenwood",
+    "Jamaica",
+    "Ozone Park",
+    "Ozone Park (North)",
+    "South Jamaica",
+    "South Richmond Hill",
+    "Springfield Gardens (South)-Brookville"
+  ],
+  "Ozone Park": [
+    "East New York-City Line",
+    "Howard Beach-Lindenwood",
+    "Ozone Park (North)",
+    "South Ozone Park"
+  ],
+  "Howard Beach-Lindenwood": [
+    "East New York-City Line",
+    "Ozone Park",
+    "South Ozone Park",
+    "Spring Creek-Starrett City"
+  ],
+  "Auburndale": [
+    "Bay Terrace-Clearview",
+    "Bayside",
+    "East Flushing",
+    "Fresh Meadows-Utopia",
+    "Murray Hill-Broadway Flushing",
+    "Queensboro Hill"
+  ],
+  "Bayside": [
+    "Auburndale",
+    "Bay Terrace-Clearview",
+    "Douglaston-Little Neck",
+    "Oakland Gardens-Hollis Hills"
+  ],
+  "Douglaston-Little Neck": [
+    "Bayside",
+    "Bellerose",
+    "Glen Oaks-Floral Park-New Hyde Park"
+  ],
+  "Oakland Gardens-Hollis Hills": [
+    "Bayside",
+    "Bellerose",
+    "Jamaica Estates-Holliswood",
+    "Queens Village"
+  ],
+  "Jamaica": [
+    "Hollis",
+    "Jamaica Estates-Holliswood",
+    "Jamaica Hills-Briarwood",
+    "Kew Gardens",
+    "Richmond Hill",
+    "South Jamaica",
+    "South Ozone Park",
+    "South Richmond Hill",
+    "St. Albans"
+  ],
+  "South Jamaica": [
+    "Baisley Park",
+    "Jamaica",
+    "South Ozone Park",
+    "South Richmond Hill",
+    "St. Albans"
+  ],
+  "Baisley Park": [
+    "South Jamaica",
+    "South Ozone Park",
+    "Springfield Gardens (North)-Rochdale Village",
+    "Springfield Gardens (South)-Brookville",
+    "St. Albans"
+  ],
+  "Springfield Gardens (North)-Rochdale Village": [
+    "Baisley Park",
+    "Laurelton",
+    "Springfield Gardens (South)-Brookville",
+    "St. Albans"
+  ],
+  "St. Albans": [
+    "Baisley Park",
+    "Cambria Heights",
+    "Hollis",
+    "Jamaica",
+    "Laurelton",
+    "Queens Village",
+    "South Jamaica",
+    "Springfield Gardens (North)-Rochdale Village"
+  ],
+  "Hollis": [
+    "Jamaica",
+    "Jamaica Estates-Holliswood",
+    "Queens Village",
+    "St. Albans"
+  ],
+  "Glen Oaks-Floral Park-New Hyde Park": [
+    "Bellerose",
+    "Douglaston-Little Neck"
+  ],
+  "Bellerose": [
+    "Douglaston-Little Neck",
+    "Glen Oaks-Floral Park-New Hyde Park",
+    "Oakland Gardens-Hollis Hills",
+    "Queens Village"
+  ],
+  "Queens Village": [
+    "Bellerose",
+    "Cambria Heights",
+    "Hollis",
+    "Jamaica Estates-Holliswood",
+    "Oakland Gardens-Hollis Hills",
+    "St. Albans"
+  ],
+  "Cambria Heights": [
+    "Laurelton",
+    "Queens Village",
+    "Rosedale",
+    "St. Albans"
+  ],
+  "Laurelton": [
+    "Cambria Heights",
+    "Rosedale",
+    "Springfield Gardens (North)-Rochdale Village",
+    "Springfield Gardens (South)-Brookville",
+    "St. Albans"
+  ],
+  "Springfield Gardens (South)-Brookville": [
+    "Baisley Park",
+    "Laurelton",
+    "Rosedale",
+    "South Ozone Park",
+    "Springfield Gardens (North)-Rochdale Village"
+  ],
+  "Rosedale": [
+    "Cambria Heights",
+    "Laurelton",
+    "Springfield Gardens (South)-Brookville"
+  ],
+  "Far Rockaway-Bayswater": [],
+  "Rockaway Beach-Arverne-Edgemere": [
+    "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel"
+  ],
+  "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel": [
+    "Rockaway Beach-Arverne-Edgemere"
+  ],
+  "St. George-New Brighton": [
+    "Tompkinsville-Stapleton-Clifton-Fox Hills",
+    "West New Brighton-Silver Lake-Grymes Hill"
+  ],
+  "Tompkinsville-Stapleton-Clifton-Fox Hills": [
+    "Rosebank-Shore Acres-Park Hill",
+    "St. George-New Brighton",
+    "West New Brighton-Silver Lake-Grymes Hill"
+  ],
+  "Rosebank-Shore Acres-Park Hill": [
+    "Grasmere-Arrochar-South Beach-Dongan Hills",
+    "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
+    "Tompkinsville-Stapleton-Clifton-Fox Hills",
+    "West New Brighton-Silver Lake-Grymes Hill"
+  ],
+  "West New Brighton-Silver Lake-Grymes Hill": [
+    "Grasmere-Arrochar-South Beach-Dongan Hills",
+    "Port Richmond",
+    "Rosebank-Shore Acres-Park Hill",
+    "St. George-New Brighton",
+    "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
+    "Tompkinsville-Stapleton-Clifton-Fox Hills",
+    "Westerleigh-Castleton Corners"
+  ],
+  "Westerleigh-Castleton Corners": [
+    "Mariner's Harbor-Arlington-Graniteville",
+    "New Springville-Willowbrook-Bulls Head-Travis",
+    "Port Richmond",
+    "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
+    "West New Brighton-Silver Lake-Grymes Hill"
+  ],
+  "Port Richmond": [
+    "Mariner's Harbor-Arlington-Graniteville",
+    "West New Brighton-Silver Lake-Grymes Hill",
+    "Westerleigh-Castleton Corners"
+  ],
+  "Mariner's Harbor-Arlington-Graniteville": [
+    "New Springville-Willowbrook-Bulls Head-Travis",
+    "Port Richmond",
+    "Westerleigh-Castleton Corners"
+  ],
+  "Grasmere-Arrochar-South Beach-Dongan Hills": [
+    "New Dorp-Midland Beach",
+    "Rosebank-Shore Acres-Park Hill",
+    "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
+    "West New Brighton-Silver Lake-Grymes Hill"
+  ],
+  "New Dorp-Midland Beach": [
+    "Grasmere-Arrochar-South Beach-Dongan Hills",
+    "Oakwood-Richmondtown",
+    "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights"
+  ],
+  "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights": [
+    "Grasmere-Arrochar-South Beach-Dongan Hills",
+    "Great Kills-Eltingville",
+    "New Dorp-Midland Beach",
+    "New Springville-Willowbrook-Bulls Head-Travis",
+    "Oakwood-Richmondtown",
+    "Rosebank-Shore Acres-Park Hill",
+    "West New Brighton-Silver Lake-Grymes Hill",
+    "Westerleigh-Castleton Corners"
+  ],
+  "New Springville-Willowbrook-Bulls Head-Travis": [
+    "Mariner's Harbor-Arlington-Graniteville",
+    "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
+    "Westerleigh-Castleton Corners"
+  ],
+  "Oakwood-Richmondtown": [
+    "Great Kills-Eltingville",
+    "New Dorp-Midland Beach",
+    "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights"
+  ],
+  "Great Kills-Eltingville": [
+    "Annadale-Huguenot-Prince's Bay-Woodrow",
+    "Arden Heights-Rossville",
+    "Oakwood-Richmondtown",
+    "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights"
+  ],
+  "Arden Heights-Rossville": [
+    "Annadale-Huguenot-Prince's Bay-Woodrow",
+    "Great Kills-Eltingville",
+    "Tottenville-Charleston"
+  ],
+  "Annadale-Huguenot-Prince's Bay-Woodrow": [
+    "Arden Heights-Rossville",
+    "Great Kills-Eltingville",
+    "Tottenville-Charleston"
+  ],
+  "Tottenville-Charleston": [
+    "Annadale-Huguenot-Prince's Bay-Woodrow",
+    "Arden Heights-Rossville"
+  ]
+}
