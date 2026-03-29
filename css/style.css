@@ -37,8 +37,13 @@ body {
   color: #e94560;
 }
 
-#map {
+#map-container {
   flex: 1;
+  position: relative;
+}
+
+#map {
+  height: 100%;
   z-index: 1;
 }
 
@@ -57,11 +62,11 @@ body {
 
 /* Confirm bar */
 #confirm-bar {
-  position: fixed;
+  position: absolute;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1500;
+  z-index: 1000;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -170,11 +175,11 @@ button:hover {
 
 /* Result card (floating over NJ) */
 #result-card {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
-  z-index: 2000;
+  z-index: 1000;
   background: #16213e;
   border: 2px solid #0f3460;
   border-radius: 12px;
