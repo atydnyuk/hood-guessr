@@ -4,6 +4,7 @@ const App = (() => {
   let state = {
     round: 0,
     score: 0,
+    seed: '',           // 6-char base-36 seed for this game
     neighborhoods: [],  // selected features for this game
     results: [],        // { name, points, distance }
     phase: 'idle',      // idle | prompting | selected | answered | ended
@@ -23,7 +24,7 @@ const App = (() => {
     GameMap.onMapClick(handleClick);
     UI.onConfirm(confirmGuess);
     UI.onNext(nextRound);
-    UI.onStart(startGame);
+    UI.onStart(() => startGame(UI.getSeedInput()));
     UI.onRestart(() => {
       UI.hideEnd();
       startGame();
@@ -32,11 +33,20 @@ const App = (() => {
     UI.showStart();
   }
 
-  function startGame() {
+  function startGame(seedStr) {
+    // Parse provided seed or generate a random one
+    let numericSeed;
+    if (seedStr && /^[0-9a-z]{1,6}$/i.test(seedStr.trim())) {
+      numericSeed = parseInt(seedStr.trim().toLowerCase(), 36);
+    } else {
+      numericSeed = Math.floor(Math.random() * 2176782336);
+    }
+    state.seed = numericSeed.toString(36).padStart(6, '0');
+
     state.round = 0;
     state.score = 0;
     state.results = [];
-    state.neighborhoods = Geo.getRandomNeighborhoods(TOTAL_ROUNDS);
+    state.neighborhoods = Geo.getNeighborhoodsForSeed(TOTAL_ROUNDS, numericSeed);
     state.phase = 'idle';
 
     UI.hideStart();
@@ -140,7 +150,7 @@ const App = (() => {
     state.phase = 'ended';
     UI.hidePrompt();
     GameMap.clear();
-    UI.showEnd(state.score, TOTAL_ROUNDS * 100, state.results);
+    UI.showEnd(state.score, TOTAL_ROUNDS * 100, state.results, state.seed);
   }
 
   return { init };

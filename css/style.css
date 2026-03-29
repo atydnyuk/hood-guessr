@@ -212,6 +212,91 @@ button:hover {
 #result-card.points-25 #result-points { color: #ff9a56; }
 #result-card.points-0 #result-points { color: #e94560; }
 
+/* Seed input (start screen) */
+#seed-input-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#seed-input-row label {
+  font-size: 13px;
+  color: #a0a0b8;
+  white-space: nowrap;
+}
+
+#seed-input {
+  background: #1a1a2e;
+  border: 1px solid #0f3460;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 14px;
+  font-family: monospace;
+  padding: 6px 10px;
+  width: 90px;
+  text-align: center;
+  letter-spacing: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#seed-input:focus {
+  border-color: #4ecdc4;
+}
+
+#seed-input::placeholder {
+  color: #4a4a6a;
+  letter-spacing: normal;
+}
+
+/* Seed display (end screen) */
+#seed-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #1a1a2e;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+}
+
+.seed-label {
+  font-size: 12px;
+  color: #a0a0b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#seed-value {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: #4ecdc4;
+  letter-spacing: 3px;
+}
+
+.seed-hint {
+  font-size: 12px;
+  color: #4a4a6a;
+  margin-bottom: 20px !important;
+}
+
+.small-btn {
+  padding: 5px 12px !important;
+  font-size: 12px !important;
+  font-weight: 600;
+  background: #0f3460 !important;
+  border-radius: 5px !important;
+}
+
+.small-btn:hover {
+  background: #1a4a8a !important;
+}
+
 /* End screen */
 #final-score {
   font-size: 56px;

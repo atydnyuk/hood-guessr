@@ -49,6 +49,10 @@
           <tr><td>Further</td><td>0 pts</td></tr>
         </table>
       </div>
+      <div id="seed-input-row">
+        <label for="seed-input">Play a friend's seed:</label>
+        <input type="text" id="seed-input" placeholder="e.g. 4f2b19" maxlength="6" autocomplete="off" spellcheck="false" />
+      </div>
       <button id="start-btn">Play</button>
     </div>
   </div>
@@ -58,6 +62,12 @@
       <h1>Game Over</h1>
       <div id="final-score"></div>
       <div id="final-breakdown"></div>
+      <div id="seed-display">
+        <span class="seed-label">Seed</span>
+        <span id="seed-value"></span>
+        <button id="copy-seed-btn" class="small-btn">Copy</button>
+      </div>
+      <p class="seed-hint">Share this seed so friends can play the same neighborhoods</p>
       <button id="restart-btn">Play Again</button>
     </div>
   </div>
