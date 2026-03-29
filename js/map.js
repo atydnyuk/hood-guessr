@@ -6,6 +6,7 @@ const GameMap = (() => {
   let overlays = [];  // neighborhood highlight layers
   let clickEnabled = false;
   let boundaryLayer = null;
+  let highlightLayer = null;
 
   function init() {
     map = L.map('map', {
@@ -50,6 +51,26 @@ const GameMap = (() => {
 
   function enableClick() { clickEnabled = true; }
   function disableClick() { clickEnabled = false; }
+
+  // Highlight a neighborhood as the current selection (before confirming)
+  function highlightSelection(feature) {
+    clearHighlight();
+    highlightLayer = L.geoJSON(feature, {
+      style: {
+        color: '#ffe66d',
+        weight: 3,
+        fillColor: '#ffe66d',
+        fillOpacity: 0.2
+      }
+    }).addTo(map);
+  }
+
+  function clearHighlight() {
+    if (highlightLayer) {
+      map.removeLayer(highlightLayer);
+      highlightLayer = null;
+    }
+  }
 
   // Drop a pin at the guessed location
   function placePin(latlng) {
@@ -133,6 +154,7 @@ const GameMap = (() => {
     overlays.forEach(l => map.removeLayer(l));
     markers = [];
     overlays = [];
+    clearHighlight();
   }
 
   // Reset map view
@@ -140,5 +162,5 @@ const GameMap = (() => {
     map.setView([40.7128, -74.006], 11);
   }
 
-  return { init, showBoundary, onMapClick, enableClick, disableClick, placePin, showCorrectNeighborhood, showGuessedNeighborhood, drawLine, placeCorrectMarker, clear, resetView };
+  return { init, showBoundary, onMapClick, enableClick, disableClick, highlightSelection, clearHighlight, placePin, showCorrectNeighborhood, showGuessedNeighborhood, drawLine, placeCorrectMarker, clear, resetView };
 })();
