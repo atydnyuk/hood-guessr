@@ -55,6 +55,40 @@ body {
   font-size: 22px;
 }
 
+/* Confirm bar */
+#confirm-bar {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  padding: 12px 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  font-size: 16px;
+  animation: slide-up 0.2s ease-out;
+}
+
+#confirm-bar strong {
+  color: #4ecdc4;
+}
+
+#confirm-btn {
+  padding: 8px 24px;
+  font-size: 15px;
+  border-radius: 6px;
+}
+
+@keyframes slide-up {
+  from { transform: translateX(-50%) translateY(20px); opacity: 0; }
+  to { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+
 /* Overlays */
 .hidden { display: none !important; }
 

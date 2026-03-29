@@ -6,7 +6,9 @@ const App = (() => {
     score: 0,
     neighborhoods: [],  // selected features for this game
     results: [],        // { name, points, distance }
-    phase: 'idle'       // idle | prompting | answered | ended
+    phase: 'idle',      // idle | prompting | selected | answered | ended
+    selectedFeature: null,
+    selectedLatlng: null
   };
 
   async function init() {
@@ -18,7 +20,8 @@ const App = (() => {
     GameMap.showBoundary(Geo.getNeighborhoods());
 
     // Wire up event handlers
-    GameMap.onMapClick(handleGuess);
+    GameMap.onMapClick(handleClick);
+    UI.onConfirm(confirmGuess);
     UI.onNext(nextRound);
     UI.onStart(startGame);
     UI.onRestart(() => {
@@ -49,6 +52,7 @@ const App = (() => {
 
   function nextRound() {
     UI.hideResult();
+    UI.hideConfirm();
     GameMap.clear();
 
     if (state.round >= TOTAL_ROUNDS) {
@@ -66,14 +70,32 @@ const App = (() => {
     GameMap.resetView();
   }
 
-  function handleGuess(latlng) {
-    if (state.phase !== 'prompting') return;
+  // Step 1: Click to select a neighborhood (highlight + confirm prompt)
+  function handleClick(latlng) {
+    if (state.phase !== 'prompting' && state.phase !== 'selected') return;
 
-    const guessedFeature = Geo.findNeighborhood(latlng.lat, latlng.lng);
-    if (!guessedFeature) return; // Ignore clicks outside neighborhoods
+    const feature = Geo.findNeighborhood(latlng.lat, latlng.lng);
+    if (!feature) return; // Ignore clicks outside neighborhoods
+
+    state.phase = 'selected';
+    state.selectedFeature = feature;
+    state.selectedLatlng = latlng;
+
+    GameMap.highlightSelection(feature);
+    UI.showConfirm();
+  }
+
+  // Step 2: Confirm the selection to submit the guess
+  function confirmGuess() {
+    if (state.phase !== 'selected' || !state.selectedFeature) return;
+
+    const guessedFeature = state.selectedFeature;
+    const latlng = state.selectedLatlng;
 
     state.phase = 'answered';
     GameMap.disableClick();
+    GameMap.clearHighlight();
+    UI.hideConfirm();
 
     const targetFeature = state.neighborhoods[state.round - 1];
     const targetName = targetFeature.properties.name;
@@ -96,7 +118,7 @@ const App = (() => {
     GameMap.placePin(latlng);
     GameMap.showCorrectNeighborhood(targetFeature);
 
-    if (guessedFeature && guessedName !== targetName) {
+    if (guessedName !== targetName) {
       GameMap.showGuessedNeighborhood(guessedFeature);
     }
 
