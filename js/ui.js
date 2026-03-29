@@ -7,7 +7,6 @@ const UI = (() => {
     els.scoreDisplay = document.getElementById('score-display');
     els.neighborhoodName = document.getElementById('neighborhood-name');
     els.promptBar = document.getElementById('prompt-bar');
-    els.resultOverlay = document.getElementById('result-overlay');
     els.resultCard = document.getElementById('result-card');
     els.resultPoints = document.getElementById('result-points');
     els.resultMessage = document.getElementById('result-message');
@@ -57,11 +56,11 @@ const UI = (() => {
       }
     }
     els.resultMessage.textContent = msg;
-    els.resultOverlay.classList.remove('hidden');
+    els.resultCard.classList.remove('hidden');
   }
 
   function hideResult() {
-    els.resultOverlay.classList.add('hidden');
+    els.resultCard.classList.add('hidden');
   }
 
   function onNext(handler) {

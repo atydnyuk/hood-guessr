@@ -92,6 +92,9 @@ const App = (() => {
     state.score += points;
     state.results.push({ name: targetName, points, distance });
 
+    // Zoom out to default view so user can see where the neighborhood is
+    GameMap.resetView();
+
     // Visual feedback
     GameMap.placePin(latlng);
     GameMap.showCorrectNeighborhood(targetFeature);
