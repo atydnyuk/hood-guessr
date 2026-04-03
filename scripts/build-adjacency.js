@@ -31,19 +31,36 @@ const boundaries = features.map(f => ({
   points: getBoundaryPoints(f.geometry)
 }));
 
+// Precompute bounding boxes for fast rejection
+boundaries.forEach(b => {
+  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  for (const [x, y] of b.points) {
+    if (x < minX) minX = x;
+    if (x > maxX) maxX = x;
+    if (y < minY) minY = y;
+    if (y > maxY) maxY = y;
+  }
+  b.bbox = { minX, maxX, minY, maxY };
+});
+
 // Check if two neighborhoods share a border (any boundary points within threshold)
 // Using ~0.0005 degrees ≈ ~50m threshold
 const THRESHOLD = 0.0005;
 const THRESHOLD_SQ = THRESHOLD * THRESHOLD;
 
 function areAdjacent(a, b) {
-  // Sample every Nth point to speed things up (still accurate enough)
-  const stepA = Math.max(1, Math.floor(a.points.length / 200));
-  const stepB = Math.max(1, Math.floor(b.points.length / 200));
-  for (let i = 0; i < a.points.length; i += stepA) {
-    for (let j = 0; j < b.points.length; j += stepB) {
-      const dx = a.points[i][0] - b.points[j][0];
-      const dy = a.points[i][1] - b.points[j][1];
+  // Quick bounding-box rejection
+  if (a.bbox.maxX + THRESHOLD < b.bbox.minX || b.bbox.maxX + THRESHOLD < a.bbox.minX ||
+      a.bbox.maxY + THRESHOLD < b.bbox.minY || b.bbox.maxY + THRESHOLD < a.bbox.minY) {
+    return false;
+  }
+  // Full pairwise check — no sampling, so shared boundaries can't be missed
+  for (let i = 0; i < a.points.length; i++) {
+    const ax = a.points[i][0];
+    const ay = a.points[i][1];
+    for (let j = 0; j < b.points.length; j++) {
+      const dx = ax - b.points[j][0];
+      const dy = ay - b.points[j][1];
       if (dx * dx + dy * dy < THRESHOLD_SQ) return true;
     }
   }
