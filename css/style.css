@@ -339,6 +339,65 @@ button:hover {
   stroke-dasharray: 6;
 }
 
+/* Mobile */
+@media (max-width: 640px) {
+  #header {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  #title {
+    display: none;
+  }
+
+  #prompt-bar {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  #neighborhood-name {
+    font-size: 18px;
+  }
+
+  #stats {
+    font-size: 13px;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  #confirm-bar {
+    left: 16px;
+    right: 16px;
+    bottom: 80px;
+    transform: none;
+    justify-content: space-between;
+    padding: 14px 20px;
+    font-size: 15px;
+    border-width: 2px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.75);
+    animation: slide-up-mobile 0.2s ease-out;
+  }
+
+  @keyframes slide-up-mobile {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  #confirm-btn {
+    padding: 12px 28px;
+    font-size: 16px;
+  }
+
+  #result-card {
+    top: auto;
+    left: 16px;
+    right: 16px;
+    bottom: 80px;
+    transform: none;
+    width: auto;
+  }
+}
+
 /* Leaflet overrides */
 .leaflet-control-attribution { font-size: 10px !important; }
 .leaflet-container { cursor: crosshair !important; }
