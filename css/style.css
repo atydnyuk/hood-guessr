@@ -366,21 +366,12 @@ button:hover {
   }
 
   #confirm-bar {
-    left: 16px;
-    right: 16px;
     bottom: 80px;
-    transform: none;
+    width: calc(100% - 32px);
     justify-content: space-between;
     padding: 14px 20px;
     font-size: 15px;
-    border-width: 2px;
     box-shadow: 0 4px 32px rgba(0,0,0,0.75);
-    animation: slide-up-mobile 0.2s ease-out;
-  }
-
-  @keyframes slide-up-mobile {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
   }
 
   #confirm-btn {
@@ -390,11 +381,10 @@ button:hover {
 
   #result-card {
     top: auto;
-    left: 16px;
-    right: 16px;
+    left: 50%;
     bottom: 80px;
-    transform: none;
-    width: auto;
+    width: calc(100% - 32px);
+    transform: translateX(-50%);
   }
 }
 
