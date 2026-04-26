@@ -115,10 +115,12 @@ const App = (() => {
     const distance = Geo.getDistance(guessedName, targetName);
 
     // Calculate points
+    const sameBorough = guessedFeature.properties.borough === targetFeature.properties.borough;
     let points;
     if (distance === 0) points = 100;
-    else if (distance === 1) points = 50;
-    else if (distance === 2) points = 25;
+    else if (distance === 1) points = 80;
+    else if (distance === 2) points = 60;
+    else if (sameBorough) points = 20;
     else points = 0;
 
     state.score += points;
@@ -143,7 +145,7 @@ const App = (() => {
 
     // Update UI
     UI.updateScore(state.score);
-    UI.showResult(points, distance, targetName, guessedName);
+    UI.showResult(points, distance, sameBorough, targetName, guessedName);
   }
 
   function endGame() {

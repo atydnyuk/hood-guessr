@@ -208,8 +208,9 @@ button:hover {
 }
 
 #result-card.points-100 #result-points { color: #4ecdc4; }
-#result-card.points-50 #result-points { color: #ffe66d; }
-#result-card.points-25 #result-points { color: #ff9a56; }
+#result-card.points-80 #result-points { color: #ffe66d; }
+#result-card.points-60 #result-points { color: #ff9a56; }
+#result-card.points-20 #result-points { color: #ff6b35; }
 #result-card.points-0 #result-points { color: #e94560; }
 
 /* Seed input (start screen) */

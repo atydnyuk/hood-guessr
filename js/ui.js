@@ -46,18 +46,20 @@ const UI = (() => {
     els.scoreDisplay.textContent = `${score} pts`;
   }
 
-  function showResult(points, distance, correctName, guessedName) {
+  function showResult(points, distance, sameBorough, correctName, guessedName) {
     els.resultCard.className = `points-${points}`;
 
     els.resultPoints.textContent = `+${points}`;
 
     let msg;
-    if (points === 100) {
+    if (distance === 0) {
       msg = `Nailed it! That's ${correctName}.`;
-    } else if (points === 50) {
+    } else if (distance === 1) {
       msg = `Close! You picked ${guessedName || 'nearby'} — ${correctName} is just one neighborhood over.`;
-    } else if (points === 25) {
+    } else if (distance === 2) {
       msg = `Not bad — ${correctName} is two neighborhoods from where you clicked.`;
+    } else if (sameBorough) {
+      msg = `Right borough at least! That was ${guessedName}. ${correctName} is ${distance} neighborhoods away.`;
     } else {
       if (guessedName) {
         msg = `That was ${guessedName}. ${correctName} is ${distance === Infinity ? 'far' : distance + ' neighborhoods'} away.`;
