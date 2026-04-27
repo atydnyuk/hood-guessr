@@ -5,12 +5,19 @@ const App = (() => {
     round: 0,
     score: 0,
     seed: '',           // 6-char base-36 seed for this game
+    isDaily: false,
     neighborhoods: [],  // selected features for this game
     results: [],        // { name, points, distance }
     phase: 'idle',      // idle | prompting | selected | answered | ended
     selectedFeature: null,
     selectedLatlng: null
   };
+
+  function getDailySeed() {
+    const d = new Date();
+    const n = d.getUTCFullYear() * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate();
+    return n.toString(36);
+  }
 
   async function init() {
     UI.init();
@@ -24,16 +31,17 @@ const App = (() => {
     GameMap.onMapClick(handleClick);
     UI.onConfirm(confirmGuess);
     UI.onNext(nextRound);
+    UI.onDailyStart(() => startGame(getDailySeed(), true));
+    UI.onRandomStart(() => startGame());
     UI.onStart(() => startGame(UI.getSeedInput()));
-    UI.onRestart(() => {
-      UI.hideEnd();
-      startGame();
-    });
+    UI.onDailyEnd(() => { UI.hideEnd(); startGame(getDailySeed(), true); });
+    UI.onRestart(() => { UI.hideEnd(); startGame(); });
+    UI.onPlaySeed(() => { UI.hideEnd(); startGame(UI.getSeedEndInput()); });
 
     UI.showStart();
   }
 
-  function startGame(seedStr) {
+  function startGame(seedStr, isDaily = false) {
     // Parse provided seed or generate a random one
     let numericSeed;
     if (seedStr && /^[0-9a-z]{1,6}$/i.test(seedStr.trim())) {
@@ -42,6 +50,7 @@ const App = (() => {
       numericSeed = Math.floor(Math.random() * 2176782336);
     }
     state.seed = numericSeed.toString(36).padStart(6, '0');
+    state.isDaily = isDaily;
 
     state.round = 0;
     state.score = 0;
@@ -152,7 +161,7 @@ const App = (() => {
     state.phase = 'ended';
     UI.hidePrompt();
     GameMap.clear();
-    UI.showEnd(state.score, TOTAL_ROUNDS * 100, state.results, state.seed);
+    UI.showEnd(state.score, TOTAL_ROUNDS * 100, state.results, state.seed, state.isDaily);
   }
 
   return { init };
