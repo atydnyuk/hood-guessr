@@ -25,6 +25,12 @@ const UI = (() => {
       });
     });
     els.restartBtn = document.getElementById('restart-btn');
+    els.dailyStartBtn = document.getElementById('daily-start-btn');
+    els.randomStartBtn = document.getElementById('random-start-btn');
+    els.dailyEndBtn = document.getElementById('daily-end-btn');
+    els.seedInputEnd = document.getElementById('seed-input-end');
+    els.playSeedBtn = document.getElementById('play-seed-btn');
+    els.seedLabel = document.getElementById('seed-label');
     els.confirmBar = document.getElementById('confirm-bar');
     els.confirmBtn = document.getElementById('confirm-btn');
   }
@@ -91,8 +97,29 @@ const UI = (() => {
     els.startBtn.addEventListener('click', handler);
   }
 
-  function showEnd(score, total, results, seed) {
+  function onDailyStart(handler) {
+    els.dailyStartBtn.addEventListener('click', handler);
+  }
+
+  function onRandomStart(handler) {
+    els.randomStartBtn.addEventListener('click', handler);
+  }
+
+  function onDailyEnd(handler) {
+    els.dailyEndBtn.addEventListener('click', handler);
+  }
+
+  function onPlaySeed(handler) {
+    els.playSeedBtn.addEventListener('click', handler);
+  }
+
+  function getSeedEndInput() {
+    return els.seedInputEnd ? els.seedInputEnd.value.trim() : '';
+  }
+
+  function showEnd(score, total, results, seed, isDaily) {
     els.finalScore.textContent = `${score} / ${total}`;
+    els.seedLabel.textContent = isDaily ? 'Daily' : 'Seed';
 
     const lines = results.map(r => {
       const icon = r.points === 100 ? '✓' : r.points > 0 ? '~' : '✗';
@@ -130,5 +157,5 @@ const UI = (() => {
     els.restartBtn.addEventListener('click', handler);
   }
 
-  return { init, showPrompt, hidePrompt, updateRound, updateScore, showResult, hideResult, onNext, showStart, hideStart, onStart, showConfirm, hideConfirm, onConfirm, showEnd, hideEnd, onRestart, getSeedInput };
+  return { init, showPrompt, hidePrompt, updateRound, updateScore, showResult, hideResult, onNext, showStart, hideStart, onStart, onDailyStart, onRandomStart, onDailyEnd, onPlaySeed, showConfirm, hideConfirm, onConfirm, showEnd, hideEnd, onRestart, getSeedInput, getSeedEndInput };
 })();

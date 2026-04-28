@@ -49,11 +49,15 @@
           <tr><td>Further</td><td>0 pts</td></tr>
         </table>
       </div>
-      <div id="seed-input-row">
-        <label for="seed-input">Play a friend's seed:</label>
-        <input type="text" id="seed-input" placeholder="e.g. 4f2b19" maxlength="6" autocomplete="off" spellcheck="false" />
+      <button id="daily-start-btn">Play Daily Challenge</button>
+      <div class="alt-modes">
+        <button id="random-start-btn" class="secondary-btn">Random Game</button>
+        <span class="mode-divider">·</span>
+        <div id="seed-input-row">
+          <input type="text" id="seed-input" placeholder="Enter seed" maxlength="6" autocomplete="off" spellcheck="false" />
+          <button id="start-btn" class="small-btn">Play</button>
+        </div>
       </div>
-      <button id="start-btn">Play</button>
     </div>
   </div>
 
@@ -63,12 +67,19 @@
       <div id="final-score"></div>
       <div id="final-breakdown"></div>
       <div id="seed-display">
-        <span class="seed-label">Seed</span>
+        <span class="seed-label" id="seed-label">Seed</span>
         <span id="seed-value"></span>
         <button id="copy-seed-btn" class="small-btn">Copy</button>
       </div>
-      <p class="seed-hint">Share this seed so friends can play the same neighborhoods</p>
-      <button id="restart-btn">Play Again</button>
+      <p class="seed-hint">Share this seed so friends can play the same game</p>
+      <div class="end-modes">
+        <button id="daily-end-btn">Daily Challenge</button>
+        <button id="restart-btn" class="secondary-btn">Random Game</button>
+        <div id="end-seed-row">
+          <input type="text" id="seed-input-end" placeholder="Enter seed" maxlength="6" autocomplete="off" spellcheck="false" />
+          <button id="play-seed-btn" class="small-btn">Play</button>
+        </div>
+      </div>
     </div>
   </div>
 
