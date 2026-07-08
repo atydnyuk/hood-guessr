@@ -1,6 +1,7 @@
 // UI module: DOM updates, overlays, feedback
 const UI = (() => {
   const els = {};
+  let endAdLoaded = false;  // guards the one-time AdSense fill on the end screen
 
   function init() {
     els.roundDisplay = document.getElementById('round-display');
@@ -131,6 +132,17 @@ const UI = (() => {
     els.copySeedBtn.textContent = 'Copy';
 
     els.endOverlay.classList.remove('hidden');
+
+    // Fill the AdSense unit now that the overlay is visible (it can't render
+    // while display:none). Only once — pushing an already-filled <ins> throws.
+    if (!endAdLoaded && window.adsbygoogle) {
+      requestAnimationFrame(() => {
+        try {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+          endAdLoaded = true;
+        } catch (e) { /* AdSense not ready / blocked — ignore */ }
+      });
+    }
   }
 
   function getSeedInput() {
