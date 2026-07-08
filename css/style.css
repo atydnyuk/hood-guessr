@@ -286,6 +286,32 @@ button:hover {
   margin-bottom: 20px !important;
 }
 
+.ad-slot {
+  margin: 18px 0;
+}
+
+/* When AdSense has no ad to show, collapse the whole slot (incl. the label)
+   so the Game Over card doesn't show an empty "Advertisement" box. */
+.ad-slot:has(ins[data-ad-status="unfilled"]) {
+  display: none;
+}
+
+.ad-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #4a4a6a;
+  margin-bottom: 4px;
+}
+
+.legal-link {
+  margin: 16px 0 0 !important;
+  font-size: 12px;
+}
+.legal-link a { color: #4a4a6a; text-decoration: none; }
+.legal-link a:hover { color: #a0a0b8; text-decoration: underline; }
+
 .secondary-btn {
   background: transparent;
   border: 2px solid #0f3460;
