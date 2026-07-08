@@ -1,0 +1,8 @@
+# Local Claude Code config
+.claude/
+
+# Raw source data (processed into tracked neighborhoods.geojson / adjacency.json via scripts/prepare-data.js)
+data/nta-raw.geojson
+
+# OS cruft
+.DS_Store
