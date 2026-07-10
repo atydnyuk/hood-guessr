@@ -102,6 +102,17 @@ const UI = (() => {
     els.dailyStartBtn.addEventListener('click', handler);
   }
 
+  // Reflect whether today's daily has already been played on this device.
+  // When played, the daily buttons stay clickable but relabel — clicking shows
+  // the saved result instead of starting a fresh game.
+  function setDailyPlayed(played) {
+    [els.dailyStartBtn, els.dailyEndBtn].forEach(btn => {
+      if (!btn) return;
+      if (btn.dataset.origText === undefined) btn.dataset.origText = btn.textContent;
+      btn.textContent = played ? "View Today's Result" : btn.dataset.origText;
+    });
+  }
+
   function onRandomStart(handler) {
     els.randomStartBtn.addEventListener('click', handler);
   }
@@ -169,5 +180,5 @@ const UI = (() => {
     els.restartBtn.addEventListener('click', handler);
   }
 
-  return { init, showPrompt, hidePrompt, updateRound, updateScore, showResult, hideResult, onNext, showStart, hideStart, onStart, onDailyStart, onRandomStart, onDailyEnd, onPlaySeed, showConfirm, hideConfirm, onConfirm, showEnd, hideEnd, onRestart, getSeedInput, getSeedEndInput };
+  return { init, showPrompt, hidePrompt, updateRound, updateScore, showResult, hideResult, onNext, showStart, hideStart, onStart, onDailyStart, setDailyPlayed, onRandomStart, onDailyEnd, onPlaySeed, showConfirm, hideConfirm, onConfirm, showEnd, hideEnd, onRestart, getSeedInput, getSeedEndInput };
 })();
