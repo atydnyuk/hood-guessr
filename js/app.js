@@ -13,10 +13,45 @@ const App = (() => {
     selectedLatlng: null
   };
 
+  const DAILY_KEY = 'hoodguessr_daily';
+
   function getDailySeed() {
     const d = new Date();
     const n = d.getUTCFullYear() * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate();
     return n.toString(36);
+  }
+
+  // Returns the saved result for *today's* daily, or null if it hasn't been
+  // played on this device yet. localStorage is per-browser and can be bypassed
+  // (incognito, clearing storage, another browser) — true one-play-per-user
+  // enforcement would require a backend.
+  function getSavedDaily() {
+    try {
+      const data = JSON.parse(localStorage.getItem(DAILY_KEY));
+      return data && data.day === getDailySeed() ? data : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveDaily(data) {
+    try {
+      localStorage.setItem(DAILY_KEY, JSON.stringify(data));
+    } catch (e) { /* storage unavailable / full — ignore */ }
+  }
+
+  // Start the daily, or — if it's already been played today — show the saved
+  // result instead of letting the player replay it.
+  function startDaily() {
+    const saved = getSavedDaily();
+    if (saved) {
+      state.isDaily = true;
+      UI.hideStart();
+      UI.showEnd(saved.score, TOTAL_ROUNDS * 100, saved.results, saved.seed, true);
+      UI.setDailyPlayed(true);
+      return;
+    }
+    startGame(getDailySeed(), true);
   }
 
   async function init() {
@@ -31,13 +66,14 @@ const App = (() => {
     GameMap.onMapClick(handleClick);
     UI.onConfirm(confirmGuess);
     UI.onNext(nextRound);
-    UI.onDailyStart(() => startGame(getDailySeed(), true));
+    UI.onDailyStart(startDaily);
     UI.onRandomStart(() => startGame());
     UI.onStart(() => startGame(UI.getSeedInput()));
-    UI.onDailyEnd(() => { UI.hideEnd(); startGame(getDailySeed(), true); });
+    UI.onDailyEnd(() => { UI.hideEnd(); startDaily(); });
     UI.onRestart(() => { UI.hideEnd(); startGame(); });
     UI.onPlaySeed(() => { UI.hideEnd(); startGame(UI.getSeedEndInput()); });
 
+    UI.setDailyPlayed(!!getSavedDaily());
     UI.showStart();
   }
 
@@ -161,6 +197,10 @@ const App = (() => {
     state.phase = 'ended';
     UI.hidePrompt();
     GameMap.clear();
+    if (state.isDaily) {
+      saveDaily({ day: getDailySeed(), seed: state.seed, score: state.score, results: state.results });
+      UI.setDailyPlayed(true);
+    }
     UI.showEnd(state.score, TOTAL_ROUNDS * 100, state.results, state.seed, state.isDaily);
   }
 
